@@ -3,11 +3,9 @@
 $bad_word = $_GET["badword"];
 $text =  $bad_word . "!!!" . " Non ricordo dove ho parcheggiato!"; 
 
-//  
-$text = str_replace($bad_word, "*** ", $text);
+// var_dump($bad_word);
+$text = str_replace($bad_word, "***", $text);
 ?>
-
-
 
 
 <!DOCTYPE html>
@@ -19,7 +17,7 @@ $text = str_replace($bad_word, "*** ", $text);
     <title>Php badwords</title>
 </head>
 <body>
-    <h1><?php echo $text; ?><h1>
+    <h1><?php echo $text; ?></h1>
     <p>Il testo ha una lunghezza di <?php echo strlen($text) ?> caratteri</p>
 </body>
 </html>
