@@ -1,7 +1,10 @@
 <?php
 // variabili
-$text = 'lorem ipsum eccmrhhua ajgtsy vbernao dhuc bnnao'; 
+$bad_word = $_GET["badword"];
+$text =  $bad_word . "!!!" . " Non ricordo dove ho parcheggiato!"; 
 
+//  
+$text = str_replace($bad_word, "*** ", $text);
 ?>
 
 
@@ -16,7 +19,7 @@ $text = 'lorem ipsum eccmrhhua ajgtsy vbernao dhuc bnnao';
     <title>Php badwords</title>
 </head>
 <body>
-    <p><?php echo $text; ?></p>
-    <p>Il testo ha una lunghezza di <?php echo strlen($text)?> caratteri</p>
+    <h1><?php echo $text; ?><h1>
+    <p>Il testo ha una lunghezza di <?php echo strlen($text) ?> caratteri</p>
 </body>
 </html>
